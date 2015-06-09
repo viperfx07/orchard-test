@@ -1,0 +1,59 @@
+.row{
+	&.no-gutters {
+  		margin-right: 0;
+  		margin-left: 0;
+
+		> [class^="col-"], > [class*=" col-"]{
+			padding-right: 0;
+  			padding-left: 0;
+		}
+  	}
+}
+
+//- Components
+
+// The splitted image
+//
+//  -----------------------------
+//  |				    |		|
+//  |					---------
+//  |					|		|
+//  -----------------------------
+
+
+.v-components{
+	&.splitted-image{
+		$v-splitted-image-bg-color: #fff;
+		$v-splitted-image-border-color: #fff;
+		$v-splitted-image-border-size: 2px;
+		
+		background-color: #fff;
+
+		.item{
+			border-right:$v-splitted-image-border-size solid $v-splitted-image-border-color;
+			border-bottom:$v-splitted-image-border-size solid $v-splitted-image-border-color;
+		}
+		
+		.ar-wrapper{
+			position: relative;
+			height:0;
+			overflow:hidden;
+			&.ar16-9{
+				padding-bottom: 56.25%; //16:9 aspect ratio
+			}
+
+			.fake-border-hide{
+				position:absolute;
+				width:100%;
+				bottom: 0;
+				height: $v-splitted-image-border-size;
+				background:$v-splitted-image-bg-color;
+			}
+		}
+	}
+}
+
+
+
+
+

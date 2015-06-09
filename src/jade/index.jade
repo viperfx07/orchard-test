@@ -1,0 +1,116 @@
+doctype
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title Boilerplate
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='assets/css/main.css')
+		//-script(src='js/vendor/modernizr-2.7.1.min.js')
+	body
+		<!--[if lt IE 8]>
+		p.browsehappy
+			| You are using an <strong>outdated</strong> browser.
+			| Please <a href="http://browsehappy.com/">upgrade your browser</a>
+			| to improve your experience.
+		<![endif]-->
+		header
+			.header__top
+				.header__logo
+					img(src="http://placehold.it/200")
+			.header__bottom
+				nav.breadcrumb
+					ul.breadcrumb__list
+						li
+							a(href="#") Merisant
+						li
+							a(href="#") Equal - APAC
+						li 
+							a(href="#") Design
+				nav.header__bottom__menu
+					ul.header__bottom__menu__list
+						li
+							a(href="#") Intranet
+							a(href="#")	Projects Admin
+							a(href="#") Logout
+
+		.container
+			aside.left__menu
+				ul
+					li
+						a(href="#") AMC
+					li
+						a(href="#") Beiersdorf
+					li.left__menu--has-child 
+						a(href="#") DST
+						ul
+							li
+								a(href="#") DST Child
+					li.left__menu--has-child 
+						a(href="#") Electrolux
+						ul
+							li
+								a(href="#") Electrolux Child
+
+
+			section.content
+				.content__header
+					h1 Design
+					a.button(href="#") Edit
+				p Flat HTML site for creating base html and css and some Javascript to be used to create templates from in the EpiServer build site.
+
+				h2 Version Control
+
+				table.table__version-control
+					tr
+						td
+							strong Repository Location
+						td https://your.repo.location
+					tr
+						td
+							strong View Repo:
+						td
+							a(href="#") https://your.repo.location
+					tr
+						td
+							strong Activity Log:
+						td
+							a(href="#") View Log
+
+				h2 Hosting
+				p No information available
+
+				.well.sub-description__well
+					h3 Websites
+
+					.alternate__box
+						.alternate__box__title
+							h4 Description:
+						.alternate__box__content
+							p Only run locally
+
+					.alternate__box
+						.alternate__box__title
+							h4 URL:
+						.alternate__box__content
+							p http://localhost
+
+					a.button(href="#") Add
+
+		footer
+			p &copy; Copyright Orchard Marketing
+								
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+		script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
+		//-script(src='js/plugins.js')
+		script(src='assets/js/global.js')
+		//- Google Analytics: change UA-XXXXX-X to be your site's ID.
+		//-
+			script
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
