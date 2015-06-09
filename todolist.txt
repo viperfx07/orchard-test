@@ -1,0 +1,8 @@
+- fixed header__bottom menu (breadcrumb + right nav)
+- fixed the tree view style
+- fixed the h1-h6 in content
+- fixed the heading in the well__sub
+- fixed the table width
+- fixed the well width
+
+- build js tree (try using React if possible)

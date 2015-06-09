@@ -3,24 +3,24 @@ html(lang='en')
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		title Boilerplate
-		meta(name='description', content='')
+		title Orchard
+		meta(name='description', content='Orchard Interface Test')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(rel='stylesheet', href='assets/css/main.css')
-		//-script(src='js/vendor/modernizr-2.7.1.min.js')
-	body
+		script(src='js/vendor/modernizr-2.7.1.min.js')
+	body.green
 		<!--[if lt IE 8]>
 		p.browsehappy
 			| You are using an <strong>outdated</strong> browser.
 			| Please <a href="http://browsehappy.com/">upgrade your browser</a>
 			| to improve your experience.
 		<![endif]-->
-		header
+		header.clearfix
 			.header__top
 				.header__logo
-					img(src="http://placehold.it/200")
-			.header__bottom
-				nav.breadcrumb
+					img(src="./assets/img/logo.jpg")
+			.header__bottom.clearfix
+				nav.breadcrumb.pull-left
 					ul.breadcrumb__list
 						li
 							a(href="#") Merisant
@@ -28,26 +28,28 @@ html(lang='en')
 							a(href="#") Equal - APAC
 						li 
 							a(href="#") Design
-				nav.header__bottom__menu
+				nav.header__bottom__menu.pull-right
 					ul.header__bottom__menu__list
 						li
 							a(href="#") Intranet
+						li
 							a(href="#")	Projects Admin
+						li
 							a(href="#") Logout
 
-		.container
-			aside.left__menu
-				ul
+		.container-fluid.no-padding.clearfix
+			aside.left-menu
+				ul.tree-view
 					li
 						a(href="#") AMC
 					li
 						a(href="#") Beiersdorf
-					li.left__menu--has-child 
+					li.tree-view--has-child 
 						a(href="#") DST
 						ul
 							li
 								a(href="#") DST Child
-					li.left__menu--has-child 
+					li.tree-view--has-child 
 						a(href="#") Electrolux
 						ul
 							li
@@ -55,54 +57,64 @@ html(lang='en')
 
 
 			section.content
-				.content__header
-					h1 Design
-					a.button(href="#") Edit
+				.content__header.clearfix
+					h1.pull-left Design
+					a.button(href="#").pull-right Edit
 				p Flat HTML site for creating base html and css and some Javascript to be used to create templates from in the EpiServer build site.
 
 				h2 Version Control
 
-				table.table__version-control
+				table.table.table--alternate.table__version-control
 					tr
 						td
-							strong Repository Location
+							| Repository Location:
 						td https://your.repo.location
 					tr
 						td
-							strong View Repo:
+							| View Repo:
 						td
 							a(href="#") https://your.repo.location
 					tr
 						td
-							strong Activity Log:
+							| Activity Log:
 						td
 							a(href="#") View Log
 
 				h2 Hosting
 				p No information available
 
-				.well.sub-description__well
+				.well.clearfix
 					h3 Websites
 
-					.alternate__box
-						.alternate__box__title
-							h4 Description:
-						.alternate__box__content
-							p Only run locally
+					.well__sub
+						.well__sub__title__container
+							.well__sub__title
+								p Description:
+						.well__sub__content__container
+							.well__sub__content
+								p Only run locally
 
-					.alternate__box
-						.alternate__box__title
-							h4 URL:
-						.alternate__box__content
-							p http://localhost
+					.well__sub
+						.well__sub__title__container
+							.well__sub__title
+								p URL:
+						.well__sub__content__container
+							.well__sub__content
+								p http://localhost
 
-					a.button(href="#") Add
+					a.button.pull-right(href="#") Add
 
 		footer
-			p &copy; Copyright Orchard Marketing
+			span.footer__copyright &copy; Copyright Orchard Marketing
 								
-		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-		script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
+		//- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+		//- script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
+		
+		<!--[if lte IE 8]>
+		script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		script(src='//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js')
+		<![endif]-->
+
 		//-script(src='js/plugins.js')
 		script(src='assets/js/global.js')
 		//- Google Analytics: change UA-XXXXX-X to be your site's ID.

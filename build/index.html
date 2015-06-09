@@ -3,47 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boilerplate</title>
-    <meta name="description" content="">
+    <title>Orchard</title>
+    <meta name="description" content="Orchard Interface Test">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
   </head>
-  <body><!--[if lt IE 8]>
+  <body class="green"><!--[if lt IE 8]>
     <p class="browsehappy">
       You are using an <strong>outdated</strong> browser.
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.
     </p><![endif]-->
-    <header>
+    <header class="clearfix">
       <div class="header__top">
-        <div class="header__logo"><img src="http://placehold.it/200"></div>
+        <div class="header__logo"><img src="./assets/img/logo.jpg"></div>
       </div>
-      <div class="header__bottom">
-        <nav class="breadcrumb">
+      <div class="header__bottom clearfix">
+        <nav class="breadcrumb pull-left">
           <ul class="breadcrumb__list">
             <li><a href="#">Merisant</a></li>
             <li><a href="#">Equal - APAC</a></li>
             <li> <a href="#">Design</a></li>
           </ul>
         </nav>
-        <nav class="header__bottom__menu">
+        <nav class="header__bottom__menu pull-right">
           <ul class="header__bottom__menu__list">
-            <li><a href="#">Intranet</a><a href="#">	Projects Admin</a><a href="#">Logout</a></li>
+            <li><a href="#">Intranet</a></li>
+            <li><a href="#">	Projects Admin</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <div class="container">
-      <aside class="left__menu">
-        <ul>
+    <div class="container-fluid no-padding clearfix">
+      <aside class="left-menu">
+        <ul class="tree-view">
           <li><a href="#">AMC</a></li>
           <li><a href="#">Beiersdorf</a></li>
-          <li class="left__menu--has-child"> <a href="#">DST</a>
+          <li class="tree-view--has-child"> <a href="#">DST</a>
             <ul>
               <li><a href="#">DST Child</a></li>
             </ul>
           </li>
-          <li class="left__menu--has-child"> <a href="#">Electrolux</a>
+          <li class="tree-view--has-child"> <a href="#">Electrolux</a>
             <ul>
               <li><a href="#">Electrolux Child</a></li>
             </ul>
@@ -51,53 +54,59 @@
         </ul>
       </aside>
       <section class="content">
-        <div class="content__header">
-          <h1>Design</h1><a href="#" class="button">Edit</a>
+        <div class="content__header clearfix">
+          <h1 class="pull-left">Design</h1><a href="#" class="button pull-right">Edit</a>
         </div>
         <p>Flat HTML site for creating base html and css and some Javascript to be used to create templates from in the EpiServer build site.</p>
         <h2>Version Control</h2>
-        <table class="table__version-control">
+        <table class="table table--alternate table__version-control">
           <tr>
-            <td><strong>Repository Location</strong></td>
+            <td>Repository Location:</td>
             <td>https://your.repo.location</td>
           </tr>
           <tr>
-            <td><strong>View Repo:</strong></td>
+            <td>View Repo:</td>
             <td><a href="#">https://your.repo.location</a></td>
           </tr>
           <tr>
-            <td><strong>Activity Log:</strong></td>
+            <td>Activity Log:</td>
             <td><a href="#">View Log</a></td>
           </tr>
         </table>
         <h2>Hosting</h2>
         <p>No information available</p>
-        <div class="well sub-description__well">
+        <div class="well clearfix">
           <h3>Websites</h3>
-          <div class="alternate__box">
-            <div class="alternate__box__title">
-              <h4>Description:</h4>
+          <div class="well__sub">
+            <div class="well__sub__title__container">
+              <div class="well__sub__title">
+                <p>Description:</p>
+              </div>
             </div>
-            <div class="alternate__box__content">
-              <p>Only run locally</p>
+            <div class="well__sub__content__container">
+              <div class="well__sub__content">
+                <p>Only run locally</p>
+              </div>
             </div>
           </div>
-          <div class="alternate__box">
-            <div class="alternate__box__title">
-              <h4>URL:</h4>
+          <div class="well__sub">
+            <div class="well__sub__title__container">
+              <div class="well__sub__title">
+                <p>URL:</p>
+              </div>
             </div>
-            <div class="alternate__box__content">
-              <p>http://localhost</p>
+            <div class="well__sub__content__container">
+              <div class="well__sub__content">
+                <p>http://localhost</p>
+              </div>
             </div>
-          </div><a href="#" class="button">Add</a>
+          </div><a href="#" class="button pull-right">Add</a>
         </div>
       </section>
     </div>
-    <footer>
-      <p>&copy; Copyright Orchard Marketing</p>
-    </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <footer><span class="footer__copyright">&copy; Copyright Orchard Marketing</span></footer><!--[if lte IE 8]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script><![endif]-->
     <script src="assets/js/global.js"></script>
   </body>
 </html>

@@ -1,1 +1,32 @@
 $base-font-size: 16px;
+
+//colors:
+$text-color: #5b594d;
+$bgcolor: #eadac0;
+
+$green-link: #2ca32b; //link
+$green-button: #337b3c; //button
+$green-button-border: #245f29; //button border
+
+//header
+$green-header: #295a2b;
+$green-header-border: #89b061;
+
+//left menu
+$left-menu-text: #313c34;
+
+//content
+$content-header-text: #49423c;
+$content-bgcolor: #fdfaf1;
+$content-gray-border: $text-color; //under h1
+$table-alternate-row: #f5f3f4; //alternate row color
+$table-border-color: #dedcdd;
+$content-box-alternate-row: #d1cfb8;
+
+//well
+$well-border: #aaa8a9;
+$well-bgcolor: #f5f3f4;
+$well-sub-bgcolor: #d1cfb8;
+
+//footer
+$footer-bgcolor: #5e5946;
