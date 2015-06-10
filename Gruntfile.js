@@ -13,11 +13,19 @@ module.exports = function(grunt) {
                 src: ['src/js/main.js'],
                 dest: 'build/assets/js/global.js'
             },
+            plugins:{
+                src: ['src/js/tree.jquery.js'],
+                dest: 'build/assets/js/plugins.js'
+            }
         },
 
         uglify: {
             my_target: {
+                options: {
+                    sourceMap: true
+                },
                 files: {
+                    'build/assets/js/plugins.min.js': ['build/assets/js/plugins.js'],
                     'build/assets/js/global.min.js': ['build/assets/js/global.js']
                 }
             }
@@ -86,7 +94,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compact',
+                    style: 'compressed',
                     compass: true
                 },
                 files: {
@@ -112,6 +120,12 @@ module.exports = function(grunt) {
             }
         },
 
+        serve: {
+            'path': './build',
+            options: {
+                port: 9000
+            }
+        }
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
