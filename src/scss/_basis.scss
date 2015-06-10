@@ -5,6 +5,10 @@ body{
 	color: $text-color;
 }
 
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
 /*****
 THEME
 ******/
@@ -74,6 +78,10 @@ COMPONENTS
 	border: 1px solid $well-border;
 	background-color: $well-bgcolor;
 	margin-bottom: 1em;
+	
+	h3{
+		font-size: 1.5em;
+	}
 
 	&__sub{
 		display:table;
@@ -96,6 +104,10 @@ COMPONENTS
 		&__title{
 			background-color: $well-sub-bgcolor;
 		}
+
+		&__content{
+			background-color: #fff;
+		}
 	}
 }
 
@@ -109,6 +121,7 @@ COMPONENTS
 	}
 
 	li{
+		margin-top: 12px;
 		list-style-type:none;
 		position: relative;
 		&:before{
@@ -122,11 +135,27 @@ COMPONENTS
 		    top: 3px;
 		    left: -12px;	
 		}
-		
-		&.tree-view--has-child{
-			& > a{
+
+		&.selected{
+			a{
 				font-weight: bold;
 			}
+		}
+
+		&.jqtree-folder{
+			&:before{
+				background-position: -10px 0;
+			}
+		}
+
+		&.jqtree-closed{
+			&:before{
+				background-position: -20px 0; 
+			}
+
+			 & > ul.jqtree_common{
+			 	display: none;
+			 }
 		}
 	}
 }
@@ -140,6 +169,8 @@ HEADER
 
 	&__menu__list{
 		list-style-type: none;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
 		li{
 			float: left;
 			color: #fff;
@@ -154,6 +185,8 @@ HEADER
 
 .breadcrumb{
 	&__list{
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
 		list-style-type: none;
 		li{
 			float:left;
@@ -197,6 +230,11 @@ CONTENT
 .left-menu{
 	width: 22%;
 	float: left;
+
+	.tree-view{
+		margin-top: 3.6em;
+		padding-left: 1.4em;
+	}
 }
 
 .content{
