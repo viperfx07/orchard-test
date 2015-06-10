@@ -488,6 +488,17 @@ THEME
 .green .button { border: 1px solid #245f29; border-radius: 4px; background-color: #337b3c; color: #fff !important; padding: 0.5em 1em; }
 
 /*********
+ICONS
+**********/
+.checkbox_empty, .checkbox_min, .checkbox_plus { background: url(./assets/img/checkbox_sprites.png) no-repeat; }
+
+.checkbox_empty { background-position: 0 0; width: 9px; height: 9px; }
+
+.checkbox_min { background-position: -10px 0; width: 9px; height: 9px; }
+
+.checkbox_plus { background-position: -20px 0; width: 9px; height: 9px; }
+
+/*********
 COMPONENTS
 *********/
 .table { width: 100%; background-color: #fff; }
@@ -502,6 +513,8 @@ COMPONENTS
 
 .tree-view a { color: #5b594d; }
 .tree-view ul { padding-left: 1em; }
+.tree-view li { list-style-type: none; position: relative; }
+.tree-view li:before { background: url(../img/checkbox_sprites.png) no-repeat; background-position: 0 0; width: 9px; height: 9px; display: block; position: absolute; content: " "; top: 3px; left: -12px; }
 .tree-view li.tree-view--has-child > a { font-weight: bold; }
 
 /*******

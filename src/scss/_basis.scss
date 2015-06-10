@@ -23,6 +23,31 @@ THEME
 }
 
 /*********
+ICONS
+**********/
+.checkbox_empty, .checkbox_min, .checkbox_plus{
+	background: url(./assets/img/checkbox_sprites.png) no-repeat;
+}
+
+.checkbox_empty{
+	background-position: 0 0;
+	width: 9px;
+	height: 9px;
+}
+
+.checkbox_min{
+	background-position: -10px 0;
+	width: 9px;
+	height: 9px;
+}
+
+.checkbox_plus{
+	background-position: -20px 0;
+	width: 9px;
+	height: 9px;
+}
+
+/*********
 COMPONENTS
 *********/
 .table{
@@ -84,6 +109,20 @@ COMPONENTS
 	}
 
 	li{
+		list-style-type:none;
+		position: relative;
+		&:before{
+			background: url(../img/checkbox_sprites.png) no-repeat;
+			background-position: 0 0;
+			width: 9px;
+			height: 9px;
+		    display:block;
+		    position:absolute;
+		    content: " ";
+		    top: 3px;
+		    left: -12px;	
+		}
+		
 		&.tree-view--has-child{
 			& > a{
 				font-weight: bold;
